@@ -10,10 +10,11 @@ export class EventBindingComponent implements OnInit {
 
   buttonName = "My button";
   i = 0;
-  value = 0;
+
   selectDisabled = false;
   selectedOption = 1;
 
+  inputName = "Alvaro";
   constructor(){
   }
 
@@ -31,7 +32,6 @@ export class EventBindingComponent implements OnInit {
   inc(){
     this.i++;
     this.buttonName = "It was clicked" + this.i + "times";
-    this.value = this.i++;
   }
 
   disable(){
@@ -51,4 +51,12 @@ export class EventBindingComponent implements OnInit {
     console.log(event)
     this.selectedOption = event.value;
   }
+
+/*
+  inputEvent(event: any){
+    console.log(event.target.value)
+    console.log(this.inputName);
+  }
+  */
+
 }
